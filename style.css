@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Lora", serif;
+    background-color: #F8F5EE;
+    color: black;
+}
+
+.header{
+    text-align: center;
+    position: relative;
+    font-family: "Lora", serif;
+    background: #0A0D12;
+}
+
+.img{
+    width: 100%;
+    height: clamp(280px, 55vw, 500px);
+    object-fit: cover;
+    opacity: 0.3;
+    display: block;
+}
+
+.top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.top h1 {
+    margin-bottom: 0px; 
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.top p {
+    margin-top: 0;
+    color: #E5E7E9;
+    letter-spacing: 3px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+section{
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: clamp(24px, 5vw, 64px);
+}
+section h2{
+    width: 100%;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    color: #641E16;
+}
+
+.santos{
+    display: block;
+    width: 100%;
+    margin-top: 32px;
+}
+
+section h2{
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto 32px;
+    border:5px solid #F4D03F ;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(244, 208, 63, 0.4);
+}
+
+.card-text{
+    flex: 1;
+    min-width: 0;
+}
+
+.card p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    line-height: 2;
+}
+
+.card img{
+    width: 250px;
+    max-width: 35%;
+    height: auto;
+    flex-shrink: 0;
+    order: 1;
+    border-radius: 10px;
+    border: 3px solid #F4D03F;
+    box-shadow: 5px 5px 5px 5px rgba(244, 208, 63, 0.4);
+}
+
+.texto-oculto{
+    display: none;
+}
+
+.card:hover .card-text{
+    display: none
+}
+.card:hover .texto-oculto{
+    display: block;
+}
+
+@media (max-width: 640px){
+    .top p{
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+
+    section{
+        padding: 24px 16px;
+    }
+
+    .card{
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .card img{
+        order: -1;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .card p{
+        padding: 0;
+        line-height: 1.7;
+    }
+}
+
+@media (hover: none){
+    .card:hover .card-text{
+        display: block;
+    }
+
+    .card .texto-oculto{
+        display: block;
+    }
+}
