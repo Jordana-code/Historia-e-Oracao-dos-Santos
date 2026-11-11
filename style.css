@@ -171,3 +171,46 @@ section h2{
         order: 2;
     }
 }
+
+footer{
+    flex-direction: column;
+    display: flex;
+    background: #12161A; 
+    color: #F8F9F9;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2{
+    color:#F4D03F;
+    margin-bottom: 0;
+}
+
+footer p{
+    color: white;
+    margin: 5px;
+}
+
+footer .github-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+footer .github-link:hover,
+footer .github-link:focus-visible{
+    text-decoration: underline;
+}
+
+footer a {
+    color: #F4D03F;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
