@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
     box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body{
     margin: 0;
@@ -93,7 +93,7 @@ section h2{
     box-shadow: 5px 5px 5px 5px rgba(244, 208, 63, 0.4);
 }
 
-.card-text{
+.card-text, .texto-oculto{
     flex: 1;
     min-width: 0;
 }
@@ -149,9 +149,10 @@ section h2{
         max-width: 320px;
     }
 
-    .card p{
+        .card p{
         padding: 0;
         line-height: 1.7;
+        text-align: left;
     }
 }
 
@@ -160,7 +161,13 @@ section h2{
         display: block;
     }
 
+    .card{
+        flex-wrap: wrap;
+    }
+
     .card .texto-oculto{
         display: block;
+        flex-basis: 100%;
+        order: 2;
     }
 }
